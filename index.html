@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FogVault - Secure Cloud Storage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">☁️ FogVault</div>
+        <div class="nav-links">
+            <a href="/login">Login</a>
+            <a href="/register" class="btn-primary">Register</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to <span class="highlight">FogVault</span></h1>
+        <p>Secure Cloud Storage with Fog Computing Technology.<br>
+        Split, encrypt, and distribute your files across multiple cloud servers.</p>
+        <div class="hero-buttons">
+            <a href="/login" class="btn-primary">Login</a>
+            <a href="/register" class="btn-secondary">Register</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <div class="icon">🔒</div>
+            <h3>Enhanced Security</h3>
+            <p>AES-256 encryption at fog nodes. No single server contains your complete file.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">⚡</div>
+            <h3>Fog Computing</h3>
+            <p>Local processing reduces latency by 40%. Files served from edge nodes near you.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🔄</div>
+            <h3>XOR Redundancy</h3>
+            <p>Advanced block recovery ensures your files remain accessible even if servers fail.</p>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step"><span>1</span><p>Upload File</p></div>
+            <div class="step"><span>2</span><p>File Splitting</p></div>
+            <div class="step"><span>3</span><p>Distributed Storage</p></div>
+            <div class="step"><span>4</span><p>Secure Download</p></div>
+        </div>
+    </section>
+</body>
+</html>

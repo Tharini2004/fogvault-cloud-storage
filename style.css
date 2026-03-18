@@ -1,0 +1,143 @@
+/* FogVault - Main Stylesheet */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; color: #333; }
+
+/* NAVBAR */
+.navbar {
+    background: #3B4FE0;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-brand { color: white; font-size: 1.3rem; font-weight: bold; text-decoration: none; }
+.nav-links a, .nav-links span {
+    color: white; text-decoration: none;
+    margin-left: 20px; font-size: 0.9rem;
+}
+.nav-links a:hover { text-decoration: underline; }
+
+/* BUTTONS */
+.btn-primary {
+    background: #3B4FE0; color: white;
+    padding: 10px 24px; border-radius: 8px;
+    border: none; cursor: pointer;
+    text-decoration: none; font-size: 0.95rem;
+    display: inline-block;
+}
+.btn-primary:hover { background: #2d3fc7; }
+.btn-secondary {
+    background: white; color: #3B4FE0;
+    padding: 10px 24px; border-radius: 8px;
+    border: 2px solid #3B4FE0; cursor: pointer;
+    text-decoration: none; font-size: 0.95rem;
+    display: inline-block;
+}
+.btn-secondary:hover { background: #f0f4ff; }
+.full-width { width: 100%; text-align: center; margin-top: 12px; }
+
+/* HERO */
+.hero {
+    text-align: center; padding: 80px 20px;
+    background: linear-gradient(135deg, #3B4FE0, #6C63FF);
+    color: white;
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 16px; }
+.hero p { font-size: 1.1rem; margin-bottom: 32px; opacity: 0.9; }
+.highlight { color: #FFD700; }
+.hero-buttons { display: flex; gap: 16px; justify-content: center; }
+
+/* FEATURES */
+.features {
+    display: flex; justify-content: center;
+    gap: 24px; padding: 60px 40px;
+    flex-wrap: wrap;
+}
+.feature-card {
+    background: white; border-radius: 12px;
+    padding: 32px; text-align: center;
+    width: 280px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.feature-card .icon { font-size: 2.5rem; margin-bottom: 16px; }
+.feature-card h3 { margin-bottom: 10px; color: #3B4FE0; }
+
+/* HOW IT WORKS */
+.how-it-works { text-align: center; padding: 40px; background: white; }
+.how-it-works h2 { margin-bottom: 32px; font-size: 1.8rem; }
+.steps { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.step span {
+    display: block; width: 48px; height: 48px;
+    background: #3B4FE0; color: white;
+    border-radius: 50%; line-height: 48px;
+    font-size: 1.2rem; font-weight: bold;
+    margin: 0 auto 12px;
+}
+
+/* AUTH */
+.auth-container {
+    display: flex; justify-content: center;
+    align-items: center; min-height: 80vh;
+}
+.auth-card {
+    background: white; border-radius: 12px;
+    padding: 40px; width: 400px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.auth-card h2 { margin-bottom: 24px; color: #3B4FE0; text-align: center; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; margin-bottom: 6px; font-weight: 500; }
+.form-group input {
+    width: 100%; padding: 10px 14px;
+    border: 1px solid #ddd; border-radius: 8px;
+    font-size: 0.95rem;
+}
+.form-group input:focus { outline: none; border-color: #3B4FE0; }
+.auth-switch { text-align: center; margin-top: 16px; color: #666; }
+.auth-switch a { color: #3B4FE0; }
+
+/* CONTAINER */
+.container { max-width: 1000px; margin: 32px auto; padding: 0 24px; }
+
+/* FILE TABLE */
+.file-table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.file-table th { background: #3B4FE0; color: white; padding: 14px 16px; text-align: left; }
+.file-table td { padding: 14px 16px; border-bottom: 1px solid #f0f0f0; }
+.file-table tr:hover { background: #f8f9ff; }
+.btn-small { padding: 6px 12px; border-radius: 6px; border: none; cursor: pointer; font-size: 0.85rem; margin-right: 6px; }
+.btn-download { background: #e8f4fd; color: #2E75B6; }
+.btn-delete { background: #fdecea; color: #c0392b; }
+
+/* UPLOAD */
+.upload-card { background: white; border-radius: 12px; padding: 40px; max-width: 600px; margin: 32px auto; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.upload-area {
+    border: 2px dashed #3B4FE0; border-radius: 12px;
+    padding: 40px; text-align: center; cursor: pointer;
+    margin-bottom: 16px;
+}
+.upload-icon { font-size: 2rem; margin-bottom: 8px; }
+#fileInput { margin-top: 12px; }
+.info-box { background: #f8f9ff; border-radius: 8px; padding: 16px; margin-top: 20px; }
+.info-box ul { margin-left: 20px; margin-top: 8px; }
+.info-box li { margin-bottom: 6px; font-size: 0.9rem; color: #555; }
+
+/* HISTORY */
+.history-list { background: white; border-radius: 12px; padding: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.history-item { display: flex; align-items: center; padding: 16px; border-bottom: 1px solid #f0f0f0; gap: 16px; }
+.history-icon { font-size: 1.5rem; }
+.history-info { flex: 1; }
+.history-info strong { display: block; }
+.history-info small { color: #888; }
+.tag { background: #e8f4fd; color: #2E75B6; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin: 4px 4px 0 0; display: inline-block; }
+.status { font-weight: bold; font-size: 0.9rem; }
+.status-success { color: #27ae60; }
+.status-failed  { color: #e74c3c; }
+
+/* ALERTS */
+.alert { padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; }
+.alert-success { background: #d4edda; color: #155724; }
+.alert-error   { background: #f8d7da; color: #721c24; }
+
+/* EMPTY STATE */
+.empty-state { text-align: center; padding: 60px; color: #888; }
+.empty-state a { margin-top: 16px; display: inline-block; }

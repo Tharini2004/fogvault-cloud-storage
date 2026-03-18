@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FogVault - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="nav-brand">☁️ FogVault</a>
+        <div class="nav-links">
+            <a href="/upload">⬆ Upload</a>
+            <a href="/dashboard">📁 Files</a>
+            <a href="/history">🕐 History</a>
+            <span>👤 {{ username }}</span>
+            <a href="/logout">→ Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>My Files</h2>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endwith %}
+
+        {% if files %}
+        <table class="file-table">
+            <thead>
+                <tr>
+                    <th>Filename</th>
+                    <th>Size</th>
+                    <th>Uploaded At</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in files %}
+                <tr>
+                    <td>📄 {{ file.filename }}</td>
+                    <td>{{ file.size_kb }} KB</td>
+                    <td>{{ file.uploaded_at.strftime('%d/%m/%Y %H:%M') }}</td>
+                    <td>
+                        <a href="/download/{{ file._id }}" class="btn-small btn-download">⬇ Download</a>
+                        <form method="POST" action="/delete/{{ file._id }}" style="display:inline">
+                            <button type="submit" class="btn-small btn-delete"
+                                onclick="return confirm('Delete this file?')">🗑 Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div class="empty-state">
+            <p>No files uploaded yet.</p>
+            <a href="/upload" class="btn-primary">Upload your first file</a>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

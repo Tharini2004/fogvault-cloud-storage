@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FogVault - Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="nav-brand">☁️ FogVault</a>
+        <div class="nav-links">
+            <a href="/upload">⬆ Upload</a>
+            <a href="/dashboard">📁 Files</a>
+            <a href="/history">🕐 History</a>
+            <span>👤 {{ username }}</span>
+            <a href="/logout">→ Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="upload-card">
+            <h2>Upload File</h2>
+            <p>Upload your files securely with fog computing technology</p>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endwith %}
+
+            <form method="POST" enctype="multipart/form-data">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">⬆</div>
+                    <p><strong>Choose a file</strong> or drag and drop</p>
+                    <input type="file" name="file" id="fileInput" required>
+                </div>
+                <button type="submit" class="btn-primary full-width">Upload File</button>
+            </form>
+
+            <div class="info-box">
+                <p><strong>How it works:</strong></p>
+                <ul>
+                    <li>Your file is split into 4 equal blocks (A, B, C, D)</li>
+                    <li>4 additional XOR blocks generated for redundancy</li>
+                    <li>Each block is stored on a separate cloud server</li>
+                    <li>MD5 hashes ensure data integrity</li>
+                    <li>Files can be recovered even if some servers fail</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

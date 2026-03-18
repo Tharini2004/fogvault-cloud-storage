@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FogVault - History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="nav-brand">☁️ FogVault</a>
+        <div class="nav-links">
+            <a href="/upload">⬆ Upload</a>
+            <a href="/dashboard">📁 Files</a>
+            <a href="/history">🕐 History</a>
+            <span>👤 {{ username }}</span>
+            <a href="/logout">→ Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Transaction History</h2>
+        <p>View your file upload and download history</p>
+
+        {% if logs %}
+        <div class="history-list">
+            {% for log in logs %}
+            <div class="history-item">
+                <div class="history-icon">
+                    {{ '⬆' if log.action == 'upload' else '⬇' if log.action == 'download' else '🗑' }}
+                </div>
+                <div class="history-info">
+                    <strong>{{ log.filename }}</strong>
+                    <span class="tag">{{ log.action }}</span>
+                    <small>{{ log.timestamp.strftime('%d/%m/%Y, %H:%M:%S') }}</small>
+                </div>
+                <span class="status status-{{ log.status }}">{{ log.status }}</span>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <p>No activity yet.</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
