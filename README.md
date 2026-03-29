@@ -1,8 +1,7 @@
 #  FogVault: Securing Cloud Storage with Fog Computing
 
 > A secure, fault-tolerant cloud storage system integrating fog computing for reduced latency, end-to-end AES-256 encryption, and reliable data recovery.
-
-**Authors:** K. Guru Sathvik (1NC22CI027), Preethi M. (1NC22CI045), Samarth V.H. (1NC22CI052), Tharini G. (1NC22CI061)
+> 
 **Institution:** Nagarjuna College of Engineering & Technology, Bengaluru
 **Department:** CSE (AI & ML) | **Academic Year:** 2025–26
 **Guide:** Rashmi P Karchi, Professor
