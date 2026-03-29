@@ -1,4 +1,4 @@
-# ☁️ FogVault: Securing Cloud Storage with Fog Computing
+#  FogVault: Securing Cloud Storage with Fog Computing
 
 > A secure, fault-tolerant cloud storage system integrating fog computing for reduced latency, end-to-end AES-256 encryption, and reliable data recovery.
 
@@ -9,22 +9,22 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 Traditional cloud storage systems suffer from:
-- ❌ High latency due to distant data centers
-- ❌ Security vulnerabilities in centralized storage
-- ❌ Slow and expensive fault recovery
+-  High latency due to distant data centers
+-  Security vulnerabilities in centralized storage
+- Slow and expensive fault recovery
 
 **FogVault** solves these by deploying **fog nodes at the network edge**, enabling:
-- ✅ Local data processing, caching & encryption
-- ✅ End-to-end AES-256 encryption + RSA key exchange
-- ✅ Fast fault-tolerant recovery
-- ✅ Role-based access control & audit logging
+- Local data processing, caching & encryption
+-  End-to-end AES-256 encryption + RSA key exchange
+-  Fast fault-tolerant recovery
+-  Role-based access control & audit logging
 
 ---
 
-## 🎯 Key Results
+##  Key Results
 
 | Parameter | Traditional Cloud | FogVault | Improvement |
 |---|---|---|---|
@@ -37,7 +37,7 @@ Traditional cloud storage systems suffer from:
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 CLIENT LAYER
@@ -60,7 +60,7 @@ Communication Module (HTTPS / MQTT)
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Component | Technology |
 |---|---|
@@ -74,7 +74,7 @@ Communication Module (HTTPS / MQTT)
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 fogvault/
@@ -100,7 +100,7 @@ fogvault/
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 ### 1. Clone the repo
 ```bash
@@ -131,7 +131,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 🔐 Security Features
+## Security Features
 
 - **AES-256** symmetric encryption for all file data
 - **RSA** asymmetric key exchange between clients and fog nodes
@@ -142,7 +142,7 @@ http://127.0.0.1:5000
 
 ---
 
-## 📋 Workflow
+## Workflow
 
 **Upload:**
 1. User selects file → sent to fog node
@@ -160,6 +160,6 @@ http://127.0.0.1:5000
 
 ---
 
-## 📄 License
+## License
 
 Academic Major Project — Nagarjuna College of Engineering & Technology, 2025–26.
